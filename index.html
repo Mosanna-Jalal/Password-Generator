@@ -74,7 +74,7 @@
 </div>
 <div class="second">
     <button onclick="doTask()">click to generate</button>
-    <button onclick="clearAll()">clear all</button>
+    <button class="clearAll()">clear all</button>
     <h3>your PASSWORD is</h3>
     <p id="password"></p>
 </div>
@@ -82,7 +82,7 @@
    <script>
        const Alphabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
        
-       
+       clearAll();
      function doTask(){
        var x=document.querySelector("#pgLength").value;
        console.log("value is="+x);
@@ -103,10 +103,12 @@ parElement.appendChild(textToAdd);
 
     }
 
-    function clearAll(){
-        var p=document.getElementById("password").innerHTML;
-        p="";
-    }
+   document.querySelector(".clearAll").addEventListener("click", clearAll)
+function clearAll() {
+    console.log("TEST");
+    document.getElementById("password").innerHTML = " ";
+
+}
 
     }   
    </script>
