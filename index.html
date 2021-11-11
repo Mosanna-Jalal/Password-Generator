@@ -74,7 +74,7 @@
 </div>
 <div class="second">
     <button onclick="doTask()">click to generate</button>
-    <button class="clearAll()">clear all</button>
+    <button class="clearAll">clear all</button>
     <h3>your PASSWORD is</h3>
     <p id="password"></p>
 </div>
@@ -103,7 +103,7 @@ parElement.appendChild(textToAdd);
 
     }
 
-   document.querySelector(".clearAll").addEventListener("click", clearAll)
+   document.querySelector(".clearAll").addEventListener("click", clearAll);
 function clearAll() {
     console.log("TEST");
     document.getElementById("password").innerHTML = " ";
