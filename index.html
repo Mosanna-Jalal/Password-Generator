@@ -80,8 +80,7 @@
 </div>
 
    <script>
-       const Alphabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-       
+       const Alphabet=["A","a","B","b","0","C","c","D","d","e","E","1","F","f","G","g","H","h","2","i","I","j","J","k","l","3","m","K","n","4","o","(","p",")","q","r","_","s","t","u","v","w","x","y","z","?",".","<",">","/",":","L","M","5","*","N","O","*","P","Q","6","&","R","S","%","7","T","U","8","$","9","#","V","W","@","X","!","Y","Z"];
        
      function doTask(){
          clearAll();
@@ -94,7 +93,7 @@
   return Math.floor(Math.random()*max);
 }
 
-var RandomNumber=getRandomInt(26);
+var RandomNumber=getRandomInt(79);
         var text=Alphabet[RandomNumber];
         console.log(text);
         var parElement = document.getElementById("password");
