@@ -7,6 +7,8 @@ let checkBox2 = document.getElementById("myCheck2");
 let checkBox3 = document.getElementById("myCheck3");
 
 
+  
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -26,41 +28,23 @@ function doTask() {
         let RandomNumber = getRandomInt(26);
        
         
-        
-       console.log(checkBox1.checked ,  checkBox2.checked , checkBox3.checked) ;
-       
-         
-        //  console.log("if"+RandomNumber);
-        //  console.log("i="+i);
-         
-        //  text=  string.charAt(RandomNumber).toUpperCase();
+     
         
          
             if(checkBox1.checked){
-                console.log(RandomNumber);
+                text+=  string.charAt(RandomNumber-3);
               text+=  string.charAt(RandomNumber).toUpperCase();
-            //   console.log(text);
-            //   let paragraph = document.getElementById("password").innerHTML;
-            //   let textAdd = document.createElement("span");
-            //   textAdd.innerHTML=text;
-            // document.getElementById("password").appendChild(textAdd);
+            
             }
             
             if(checkBox3.checked){
+                text+=  string.charAt(RandomNumber);
                 text+=  specialCharacters.charAt(RandomNumber);
-            //   console.log(specialCharacters.charAt(RandomNumber));
-            //   let paragraph = document.getElementById("password").innerHTML;
-            //   let textAdd = document.createElement("span");
-            //   textAdd.innerHTML=text;
-            // document.getElementById("password").appendChild(textAdd);
+            
             }     
             if(checkBox2.checked){
+                text+=  string.charAt(RandomNumber);
               text+=  numerics.charAt(RandomNumber);
-            //   console.log(text);
-            //   let paragraph = document.getElementById("password").innerHTML;
-            //   let textAdd = document.createElement("span");
-            //   textAdd.innerHTML=text;
-            // document.getElementById("password").appendChild(textAdd);
             } 
             
             else{
@@ -70,10 +54,15 @@ function doTask() {
             
           
             
-            
+            document.getElementById('clipboardCopy').addEventListener('click', clipboardCopy);
+async function clipboardCopy() {
+  let text = document.querySelector("#password").innerText;
+  await navigator.clipboard.writeText(text);
+}
         
         
-    
+document.getElementById("clipboardCopy").style.display = "block";
+document.getElementById("clipboardCopy").style.margin = "auto";
 
 
     }
